@@ -29,7 +29,12 @@ class Usuario {
 
 }
 
-let a = new Usuario (`Genaro`, `Vignaroli`, [{nombre:`El limonero real`, autor:`juan jose saer`},{nombre: `100 años de soledad`,autor:`Gracia marquez`}, {nombre:`Rayuela`, autor:`Borges`}], [`perro`, `gato`])
+let a = new Usuario (`Genaro`, `Vignaroli`, 
+                    [{nombre:`El limonero real`, autor:`juan jose saer`},
+                    {nombre: `100 años de soledad`,autor:`Gracia marquez`}, 
+                    {nombre:`Rayuela`, autor:`Borges`}], 
+                    [`perro`, `gato`])
+                    
 
 a.getFullName();
 a.addMascota(`conejo`);
