@@ -1,0 +1,16 @@
+html 
+  head 
+    title Entregable 5
+  
+  body 
+    h1 Cargar Producto 
+    form(action="/api/productos/cargarProductos" method="get")
+      ul
+        li   
+          label(for="title") Title:
+          input(type="text" name="title")  
+        li 
+          label(for="price") Price:
+          input(type="text" name="price") 
+        li 
+          a(href="/api/productos/mostrarProducto", class="button") Cargar Producto
