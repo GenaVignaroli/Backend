@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Entregable 6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="h11">CARGAR PRODUCTO</h1>
+    <form class="form1">
+        <input class="input1" type="text" id="nombre" placeholder="Nombre del item..." />
+        <input class="input1" type="text" id="precio" placeholder="Precio..." />
+        <input class="input1" type="text" id="foto" placeholder="Url..." />
+        <button onclick="sendData(this)">CARGAR!</button>
+    </form>
+    <table class="table">
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Foto</th>
+        </tr>
+        <tr id="new-item" >
+            
+        </tr>
+    </table>
+    <h1 class="h12">CHAT</h1>
+    <form class="form2">
+        <input class="input1" type="text" id="usuario" placeholder="usuario@gmail.com" />
+        <div id="new-msj">
+
+        </div>
+        <input class="input1" type="text" id="msj" placeholder="Escribe aqui..." />
+        <button onclick="sendMsj(this)">Enviar!</button>
+    </form>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="/client.js"></script>
+</body>
+</html>
