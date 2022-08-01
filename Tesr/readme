@@ -1,0 +1,10 @@
+El proyecto funciona con dos archivos .js donde se encuentran todos los endpoints y dos archivos controlllers
+donde se ejecutan todas las funcionalidades de dichos endpoints.
+
+El archivo producttos.js contiene dos routers .GET donde el primero trae todos los productos persistidos en un 
+arichivo .json y el segundo trae un producto por su id, filtrado del archivo .json. El router .POST carga un nuevo producto
+pero solo es de acceso permitido para el admin. El router .PUT edita un producto seleccionado por su id y por ultimo el .DELETE borra un producto seleccionado por su id.
+
+En el archivo carrito.js el primero router es .POST que es mediante el cual se crea un carrito y su data se graba en otro archivo .json. El segundo es un .DELETE mediante el cual se borra un carrito por su id. El tercer endpoiuunt es un router .GET donde se listan los productos cargados en un carrito mediante su id. El siguiente es un .GET mediante el cual se listan todos los carritos. El quinto es un .POST el cual permite agregar un producto por su id a un carrito. Tambien hay un .DELETE el cual se encarga de borrar un producto de un carrito utilizando el id del carrito y el id del producto.
+
+Todos los endpoints del carrito sumado al POST, PUT y DELETE de productos, son de acceso permitido para el admin. Esto lo genero mediante un middleware, el cual es extraido de el header mediante req.header. Para poder tener acceso hay que agregar en postman en KEY la palabra admin y en VALUE true.
