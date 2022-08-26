@@ -1,0 +1,296 @@
+{
+    "swagger": "2.0",
+    "title": "Proyecto Final Backend",
+    "description": "This is a sample server for a pet store.",
+    "termsOfService": "http://example.com/terms/",
+    "contact": {
+      "name": "API Support",
+      "url": "http://www.example.com/support",
+      "email": "support@example.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.1",
+    "paths": {
+      "/auth/login": {
+        "post": {
+          "description": "Login to the app.",
+          "responses": {
+            "200": {          
+              "description": "Succesful login",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "msg": "msg",
+                    "user": {
+                      
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/auth/signup": {
+        "post": {
+          "description": "Signup to the app.",
+          "responses": {
+            "200": {          
+              "description": "Succesful signup",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "msg": "msg",
+                    "user": {
+                      
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/cart": {
+        "get": {
+          "description": "Show Cart.",
+          "responses": {
+            "200": {          
+              "description": "Show cart with products in it or empty",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "msg": "Cart info"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/cart/add": {
+        "post": {
+          "description": "Add products to the cart",
+          "responses": {
+            "200": {          
+              "description": "Adding products to the cart",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "msg": "Cart with products in it."
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/cart/remove": {
+        "post": {
+          "description": "Removing products from the cart",
+          "responses": {
+            "200": {          
+              "description": "Removing products for the cart.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "msg": "Cart updated"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/cart/order": {
+        "post": {
+          "description": "Create the order with the cart info.",
+          "responses": {
+            "200": {          
+              "description": "order created.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "msg": "Order created"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/categories": {
+        "get": {
+          "description": "Bring all the categories",
+          "responses": {
+            "200": {          
+              "description": "All the categories are here.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "msg": "List of categories."
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/categories/:id": {
+        "get": {
+          "description": "Bring a particular categorie.",
+          "responses": {
+            "200": {          
+              "description": "Categorie founded by id.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "msg": "Categorie"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/categories/create": {
+        "post": {
+          "description": "Create the categorie.",
+          "responses": {
+            "200": {          
+              "description": "Categorie created.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "msg": "Categorie created"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/categories/update/:id": {
+        "put": {
+          "description": "Modify the categorie.",
+          "responses": {
+            "200": {          
+              "description": "Categorie modified.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "msg": "Categorie modified"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/categories/delete/:id": {
+        "delete": {
+          "description": "Delete the categorie.",
+          "responses": {
+            "200": {          
+              "description": "Categorie deleted.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "msg": "Categorie deleted"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/products": {
+        "get": {
+          "description": "Get all products.",
+          "responses": {
+            "200": {          
+              "description": "List of all products.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "msg": "All products."
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/products/:id": {
+        "get": {
+          "description": "Get product by id.",
+          "responses": {
+            "200": {          
+              "description": "One product.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "msg": "Product info"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/products/create": {
+        "post": {
+          "description": "Create  product.",
+          "responses": {
+            "200": {          
+              "description": "Product created.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "msg": "New product info"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/products/update/:id": {
+        "put": {
+          "description": "Modify product.",
+          "responses": {
+            "200": {          
+              "description": "Product updated.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "msg": "Product with new info."
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/products/delete/:id": {
+        "put": {
+          "description": "Delete product.",
+          "responses": {
+            "200": {          
+              "description": "Product Deleted.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "msg": "new list of products."
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+}
